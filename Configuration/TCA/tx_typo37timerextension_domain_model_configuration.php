@@ -139,7 +139,11 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['-- Label --', 0],
+                    ['Civil', 'civil'],
+                    ['Civil Light', 'civillight'],
+                    ['Two', 'two'],
+                    ['Astronomical', 'astro'],
+                    ['Meteorological', 'meteo'],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
