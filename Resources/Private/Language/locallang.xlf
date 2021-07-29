@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:typo3_7timer_extension/Resources/Private/Language/locallang" date="2021-07-29T08:55:55Z" product-name="typo3_7timer_extension">
+		<header/>
+		<body>
+			<trans-unit id="tx_typo37timerextension_domain_model_configuration" resname="tx_typo37timerextension_domain_model_configuration">
+				<source>Configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_typo37timerextension_domain_model_configuration.label" resname="tx_typo37timerextension_domain_model_configuration.label">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="tx_typo37timerextension_domain_model_configuration.lon" resname="tx_typo37timerextension_domain_model_configuration.lon">
+				<source>Lon</source>
+			</trans-unit>
+			<trans-unit id="tx_typo37timerextension_domain_model_configuration.lat" resname="tx_typo37timerextension_domain_model_configuration.lat">
+				<source>Lat</source>
+			</trans-unit>
+			<trans-unit id="tx_typo37timerextension_domain_model_configuration.type" resname="tx_typo37timerextension_domain_model_configuration.type">
+				<source>Type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
