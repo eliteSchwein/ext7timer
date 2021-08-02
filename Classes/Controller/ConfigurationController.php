@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ThomasLudwig\Typo37timerExtension\Controller;
 
 
+use ThomasLudwig\Typo37timerExtension\Domain\Repository\ConfigurationRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -25,14 +26,14 @@ class ConfigurationController extends ActionController
     /**
      * configurationRepository
      *
-     * @var \ThomasLudwig\Typo37timerExtension\Domain\Repository\ConfigurationRepository
+     * @var ConfigurationRepository
      */
     protected $configurationRepository = null;
 
     /**
-     * @param \ThomasLudwig\Typo37timerExtension\Domain\Repository\ConfigurationRepository $configurationRepository
+     * @param ConfigurationRepository $configurationRepository
      */
-    public function injectConfigurationRepository(\ThomasLudwig\Typo37timerExtension\Domain\Repository\ConfigurationRepository $configurationRepository)
+    public function injectConfigurationRepository(ConfigurationRepository $configurationRepository)
     {
         $this->configurationRepository = $configurationRepository;
     }
