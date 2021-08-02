@@ -11,7 +11,7 @@ defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
     ExtensionUtility::configurePlugin(
-        'Typo37timerExtension',
+        'Typo3_7timerExtension',
         '7timerextensionplugin',
         [
             ConfigurationController::class => 'show'
@@ -50,13 +50,13 @@ call_user_func(static function() {
     );
 
     ExtensionManagementUtility::addTypoScript(
-        'tl_bath_configurator',
+        'typo3_7timer_extension',
         'constants',
         "@import 'EXT:typo3_7timer_extension/Configuration/TypoScript/constants.typoscript'"
     );
 
     ExtensionManagementUtility::addTypoScript(
-        'tl_bath_configurator',
+        'typo3_7timer_extension',
         'setup',
         "@import 'EXT:typo3_7timer_extension/Configuration/TypoScript/setup.typoscript'"
     );
