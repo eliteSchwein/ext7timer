@@ -39,7 +39,7 @@ call_user_func(static function() {
 
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $iconRegistry->registerIcon(
-        'ext7timer-plugin-plugin7timer',
+        'ext7timer-plugin-plugin7timer-OFF',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:ext7timer/Resources/Public/Icons/7timer_logo.gif']
     );
