@@ -43,8 +43,9 @@ class ConfigurationController extends ActionController
      * @param \ThomasLudwig\Typo37timerExtension\Domain\Model\Configuration $configuration
      * @return string|object|null|void
      */
-    public function showAction(\ThomasLudwig\Typo37timerExtension\Domain\Model\Configuration $configuration)
+    public function listAction()
     {
+        $configuration = $this->configurationRepository->fetchAll();
         $this->view->assign('configuration', $configuration);
     }
 }
