@@ -2,6 +2,7 @@
 
 use ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
+use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
@@ -41,7 +42,7 @@ call_user_func(static function() {
        }'
     );
 
-    $iconRegistry = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
     $iconRegistry->registerIcon(
         'typo3_7timer_extension-plugin-7timerextensionplugin',
         SvgIconProvider::class,

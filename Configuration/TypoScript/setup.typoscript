@@ -1,3 +1,5 @@
+page = PAGE
+
 plugin.tx_typo37timerextension_7timerextensionplugin {
     view {
         templateRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Templates/
@@ -21,6 +23,10 @@ plugin.tx_typo37timerextension_7timerextensionplugin {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+}
+
+page.includeCSS {
+    plugin_form = EXT:typo3_7timer_extension/Resources/Public/CSS/7timer_plugin.css
 }
 
 # these classes are only used in auto-generated templates
