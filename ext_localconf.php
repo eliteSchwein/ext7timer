@@ -1,6 +1,6 @@
 <?php
 
-use ThomasLudwig\ext7timer\Controller\ConfigurationController;
+use ThomasLudwig\ext7timer\Controller\TimerController;
 
 defined('TYPO3_MODE') || die();
 
@@ -9,11 +9,11 @@ call_user_func(static function() {
         'ext7timer',
         'plugin7timer',
         [
-            ConfigurationController::class => 'list'
+            TimerController::class => 'list'
         ],
         // non-cacheable actions
         [
-            ConfigurationController::class => 'list'
+            TimerController::class => 'list'
         ]
     );
 
