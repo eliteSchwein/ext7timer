@@ -41,16 +41,16 @@ plugin.tx_ext7timer._CSS_DEFAULT_STYLE (
         border: 1px #FF0000 solid;
     }
 
-    .tx--7timer-extension table {
+    .tx--ext7timer table {
         border-collapse:separate;
         border-spacing:10px;
     }
 
-    .tx--7timer-extension table th {
+    .tx--ext7timer table th {
         font-weight:bold;
     }
 
-    .tx--7timer-extension table td {
+    .tx--ext7timer table td {
         vertical-align:top;
     }
 

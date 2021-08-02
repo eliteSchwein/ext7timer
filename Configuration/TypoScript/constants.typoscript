@@ -1,11 +1,11 @@
 plugin.tx_ext7timer_plugin7timer {
     view {
         # cat=plugin.tx_ext7timer_plugin7timer/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:7timer_extension/Resources/Private/Templates/
+        templateRootPath = EXT:ext7timer/Resources/Private/Templates/
         # cat=plugin.tx_ext7timer_plugin7timer/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:7timer_extension/Resources/Private/Partials/
+        partialRootPath = EXT:ext7timer/Resources/Private/Partials/
         # cat=plugin.tx_ext7timer_plugin7timer/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:7timer_extension/Resources/Private/Layouts/
+        layoutRootPath = EXT:ext7timer/Resources/Private/Layouts/
     }
     persistence {
         # cat=plugin.tx_ext7timer_plugin7timer//a; type=string; label=Default storage PID
