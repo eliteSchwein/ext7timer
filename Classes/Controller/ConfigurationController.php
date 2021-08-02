@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\Typo37timerExtension\Controller;
+namespace ThomasLudwig\Typo3_7timerExtension\Controller;
 
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
