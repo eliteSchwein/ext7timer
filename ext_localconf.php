@@ -13,7 +13,7 @@ call_user_func(static function() {
         ],
         // non-cacheable actions
         [
-         //   ConfigurationController::class => 'list'
+            ConfigurationController::class => 'list'
         ]
     );
 
