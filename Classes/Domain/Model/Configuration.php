@@ -44,13 +44,6 @@ class Configuration extends AbstractEntity
     protected $lat = 0.0;
 
     /**
-     * type
-     *
-     * @var int
-     */
-    protected $type = 0;
-
-    /**
      * Returns the label
      *
      * @return string $label
@@ -111,26 +104,5 @@ class Configuration extends AbstractEntity
     public function setLat(float $lat)
     {
         $this->lat = $lat;
-    }
-
-    /**
-     * Returns the type
-     *
-     * @return int $type
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * Sets the type
-     *
-     * @param int $type
-     * @return void
-     */
-    public function setType(int $type)
-    {
-        $this->type = $type;
     }
 }

@@ -7,7 +7,7 @@
 .idea/**/discord.xml
 .idea/**/modules.xml
 .idea/**/php.xml
-.idea/**/typo3_bad.iml
+.idea/**/typo3_7timer_extension.iml
 
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider

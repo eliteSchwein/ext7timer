@@ -1,6 +1,5 @@
 CREATE TABLE tx_typo37timerextension_domain_model_configuration (
 	label varchar(255) NOT NULL DEFAULT '',
 	lon double(11,2) NOT NULL DEFAULT '0.00',
-	lat double(11,2) NOT NULL DEFAULT '0.00',
-	type int(11) DEFAULT '0' NOT NULL
+	lat double(11,2) NOT NULL DEFAULT '0.00'
 );

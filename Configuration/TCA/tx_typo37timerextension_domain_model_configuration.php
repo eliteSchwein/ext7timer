@@ -20,7 +20,7 @@ return [
         'iconfile' => 'EXT:typo3_7timer_extension/Resources/Public/Icons/tx_typo37timerextension_domain_model_configuration.gif'
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, label, lon, lat, type, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, label, lon, lat, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -132,24 +132,5 @@ return [
                 'eval' => 'double2'
             ]
         ],
-        'type' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo37timerextension_domain_model_configuration.type',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['Civil', 'civil'],
-                    ['Civil Light', 'civillight'],
-                    ['Two', 'two'],
-                    ['Astronomical', 'astro'],
-                    ['Meteorological', 'meteo'],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
-                'eval' => ''
-            ],
-        ],
-    
     ],
 ];
