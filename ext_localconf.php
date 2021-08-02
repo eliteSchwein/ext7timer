@@ -1,28 +1,22 @@
 <?php
 
-use ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController;
-use TYPO3\CMS\Core\Imaging\IconRegistry;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-
 defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
-    ExtensionUtility::configurePlugin(
+    TYPO3\CMS\Extbase\Utility\ExtensionUtility\ExtensionUtility::configurePlugin(
         'Typo3_7timerExtension',
         '7timerextensionplugin',
         [
-            ConfigurationController::class => 'show'
+            ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController\ConfigurationController::class => 'show'
         ],
         // non-cacheable actions
         [
-            ConfigurationController::class => 'show'
+            ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController\ConfigurationController::class => 'show'
         ]
     );
 
     // wizards
-    ExtensionManagementUtility::addPageTSConfig(
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility\ExtensionManagementUtility::addPageTSConfig(
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
@@ -41,20 +35,20 @@ call_user_func(static function() {
        }'
     );
 
-    $iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
+    $iconRegistry = TYPO3\CMS\Core\Utility\GeneralUtility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Imaging\IconRegistry\IconRegistry::class);
     $iconRegistry->registerIcon(
         'typo3_7timer_extension-plugin-7timerextensionplugin',
         TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:typo3_7timer_extension/Resources/Public/Icons/user_plugin_7timerextensionplugin.svg']
     );
 
-    ExtensionManagementUtility::addTypoScript(
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility\ExtensionManagementUtility::addTypoScript(
         'typo3_7timer_extension',
         'constants',
         "@import 'EXT:typo3_7timer_extension/Configuration/TypoScript/constants.typoscript'"
     );
 
-    ExtensionManagementUtility::addTypoScript(
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility\ExtensionManagementUtility::addTypoScript(
         'typo3_7timer_extension',
         'setup',
         "@import 'EXT:typo3_7timer_extension/Configuration/TypoScript/setup.typoscript'"
