@@ -7,11 +7,11 @@ call_user_func(static function() {
         'Typo3_7timerExtension',
         '7timerextensionplugin',
         [
-            ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => 'show'
+            ThomasLudwig\Typo3_7timerExtension\Controller\ConfigurationController::class => 'show'
         ],
         // non-cacheable actions
         [
-            ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => 'show'
+            ThomasLudwig\Typo3_7timerExtension\Controller\ConfigurationController::class => 'show'
         ]
     );
 
