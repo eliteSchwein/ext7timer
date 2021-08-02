@@ -1,16 +1,16 @@
 page = PAGE
 
-plugin.tx_typo37timerextension_7timerextensionplugin {
+plugin.tx_7timerextension_7timerplugin {
     view {
-        templateRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.templateRootPath}
-        partialRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.partialRootPath}
-        layoutRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.layoutRootPath}
+        templateRootPaths.0 = EXT:7timer_extension/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.templateRootPath}
+        partialRootPaths.0 = EXT:7timer_extension/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.partialRootPath}
+        layoutRootPaths.0 = EXT:7timer_extension/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_typo37timerextension_7timerextensionplugin.persistence.storagePid}
+        storagePid = {$plugin.tx_7timerextension_7timerplugin.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -26,11 +26,11 @@ plugin.tx_typo37timerextension_7timerextensionplugin {
 }
 
 page.includeCSS {
-    plugin_form = EXT:typo3_7timer_extension/Resources/Public/CSS/7timer_plugin.css
+    plugin_form = EXT:7timer_extension/Resources/Public/CSS/7timer_plugin.css
 }
 
 # these classes are only used in auto-generated templates
-plugin.tx_typo37timerextension._CSS_DEFAULT_STYLE (
+plugin.tx_7timerextension._CSS_DEFAULT_STYLE (
     textarea.f3-form-error {
         background-color:#FF9F9F;
         border: 1px #FF0000 solid;
@@ -41,24 +41,24 @@ plugin.tx_typo37timerextension._CSS_DEFAULT_STYLE (
         border: 1px #FF0000 solid;
     }
 
-    .tx-typo3-7timer-extension table {
+    .tx--7timer-extension table {
         border-collapse:separate;
         border-spacing:10px;
     }
 
-    .tx-typo3-7timer-extension table th {
+    .tx--7timer-extension table th {
         font-weight:bold;
     }
 
-    .tx-typo3-7timer-extension table td {
+    .tx--7timer-extension table td {
         vertical-align:top;
     }
 
-    .typo3-messages .message-error {
+    .-messages .message-error {
         color:red;
     }
 
-    .typo3-messages .message-ok {
+    .-messages .message-ok {
         color:green;
     }
 )

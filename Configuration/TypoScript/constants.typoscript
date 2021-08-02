@@ -1,14 +1,14 @@
-plugin.tx_typo37timerextension_7timerextensionplugin {
+plugin.tx_7timerextension_7timerplugin {
     view {
-        # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:typo3_7timer_extension/Resources/Private/Templates/
-        # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:typo3_7timer_extension/Resources/Private/Partials/
-        # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:typo3_7timer_extension/Resources/Private/Layouts/
+        # cat=plugin.tx_7timerextension_7timerplugin/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:7timer_extension/Resources/Private/Templates/
+        # cat=plugin.tx_7timerextension_7timerplugin/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:7timer_extension/Resources/Private/Partials/
+        # cat=plugin.tx_7timerextension_7timerplugin/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:7timer_extension/Resources/Private/Layouts/
     }
     persistence {
-        # cat=plugin.tx_typo37timerextension_7timerextensionplugin//a; type=string; label=Default storage PID
+        # cat=plugin.tx_7timerextension_7timerplugin//a; type=string; label=Default storage PID
         storagePid =
     }
 }
