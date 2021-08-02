@@ -11,7 +11,7 @@ call_user_func(static function() {
         ],
         // non-cacheable actions
         [
-            \ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => ''
+            \ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => 'show'
         ]
     );
 
