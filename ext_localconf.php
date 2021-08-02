@@ -35,7 +35,7 @@ call_user_func(static function() {
        }'
     );
 
-    $iconRegistry = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Imaging\IconRegistry\IconRegistry::class);
+    $iconRegistry = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $iconRegistry->registerIcon(
         'typo3_7timer_extension-plugin-7timerextensionplugin',
         TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
