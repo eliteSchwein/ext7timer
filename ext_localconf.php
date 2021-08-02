@@ -26,7 +26,7 @@ call_user_func(static function() {
                         description = LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo3_7timer_extension_7timerextensionplugin.description
                         tt_content_defValues {
                             CType = list
-                            list_type = typo37timerextension_7timerextensionplugin
+                            list_type = typo3_7timerextension_7timerextensionplugin
                         }
                     }
                 }
