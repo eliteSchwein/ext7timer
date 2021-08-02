@@ -10,11 +10,11 @@
                 <el>
                     <inputs>
                         <TCEforms>
-                            <label>LLL:EXT:7timer_extension/Resources/Private/Language/flexform.xlf:tx_7timerextension_7timerplugin.flexform.name</label>
+                            <label>LLL:EXT:ext7timer/Resources/Private/Language/flexform.xlf:tx_ext7timer_plugin7timer.flexform.name</label>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
-                                <foreign_table>tx_7timerextension_domain_model_configuration</foreign_table>
+                                <foreign_table>tx_ext7timer_domain_model_configuration</foreign_table>
                                 <foreign_field></foreign_field>
                                 <foreign_match_fields type="array">
                                     <parentidentifier>flexform.inputs</parentidentifier>

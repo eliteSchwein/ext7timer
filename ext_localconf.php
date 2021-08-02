@@ -6,8 +6,8 @@ defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        '7timerExtension',
-        '7timerplugin',
+        'ext7timer',
+        'plugin7timer',
         [
             ConfigurationController::class => 'list'
         ],
@@ -22,13 +22,13 @@ call_user_func(static function() {
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
-                    7timerextensionplugin {
-                        iconIdentifier = 7timer_extension-plugin-7timerplugin
-                        title = LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timer_extension_7timerplugin.name
-                        description = LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timer_extension_7timerplugin.description
+                    plugin7timer {
+                        iconIdentifier = ext7timer-plugin-plugin7timer
+                        title = LLL:EXT:ext7timer/Resources/Private/Language/locallang_db.xlf:tx_ext7timer_plugin7timer.name
+                        description = LLL:EXT:ext7timer/Resources/Private/Language/locallang_db.xlf:tx_ext7timer_plugin7timer.description
                         tt_content_defValues {
                             CType = list
-                            list_type = 7timerextension_7timerplugin
+                            list_type = ext7timer_plugin7timer
                         }
                     }
                 }
@@ -39,20 +39,20 @@ call_user_func(static function() {
 
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $iconRegistry->registerIcon(
-        '7timer_extension-plugin-7timerplugin',
+        'ext7timer-plugin-plugin7timer',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:7timer_extension/Resources/Public/Icons/7timer_logo.gif']
+        ['source' => 'EXT:ext7timer/Resources/Public/Icons/7timer_logo.gif']
     );
 
     TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
-        '7timer_extension',
+        'ext7timer',
         'constants',
-        "@import 'EXT:7timer_extension/Configuration/TypoScript/constants.typoscript'"
+        "@import 'EXT:ext7timer/Configuration/TypoScript/constants.typoscript'"
     );
 
     TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
-        '7timer_extension',
+        'ext7timer',
         'setup',
-        "@import 'EXT:7timer_extension/Configuration/TypoScript/setup.typoscript'"
+        "@import 'EXT:ext7timer/Configuration/TypoScript/setup.typoscript'"
     );
 });

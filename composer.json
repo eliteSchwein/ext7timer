@@ -1,5 +1,5 @@
 {
-    "name": "thomas-ludwig/7timer-extension",
+    "name": "thomas-ludwig/ext7timer",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": [
@@ -26,7 +26,7 @@
         }
     },
     "replace": {
-        "typo3-ter/7timer-extension": "self.version"
+        "typo3-ter/ext7timer": "self.version"
     },
     "config": {
         "vendor-dir": ".Build/vendor",

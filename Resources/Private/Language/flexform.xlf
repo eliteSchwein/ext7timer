@@ -3,7 +3,7 @@
 	<file source-language="en" datatype="plaintext" original="EXT:7timer_extension/Resources/Private/Language/locallang_db" date="2021-07-19T06:06:52Z" product-name="7timer_extension">
 		<header/>
 		<body>
-			<trans-unit id="tx_7timerextension_7timerplugin.flexform.name" resname="tx_7timerextension_7timerplugin.flexform.name">
+			<trans-unit id="tx_ext7timer_plugin7timer.flexform.name" resname="tx_ext7timer_plugin7timer.flexform.name">
 				<source>Select Location</source>
 			</trans-unit>
 		</body>

@@ -1,16 +1,16 @@
 page = PAGE
 
-plugin.tx_7timerextension_7timerplugin {
+plugin.tx_ext7timer_plugin7timer {
     view {
-        templateRootPaths.0 = EXT:7timer_extension/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.templateRootPath}
-        partialRootPaths.0 = EXT:7timer_extension/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.partialRootPath}
-        layoutRootPaths.0 = EXT:7timer_extension/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_7timerextension_7timerplugin.view.layoutRootPath}
+        templateRootPaths.0 = EXT:ext7timer/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_ext7timer_plugin7timer.view.templateRootPath}
+        partialRootPaths.0 = EXT:ext7timer/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_ext7timer_plugin7timer.view.partialRootPath}
+        layoutRootPaths.0 = EXT:ext7timer/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_ext7timer_plugin7timer.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_7timerextension_7timerplugin.persistence.storagePid}
+        storagePid = {$plugin.tx_ext7timer_plugin7timer.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -26,11 +26,11 @@ plugin.tx_7timerextension_7timerplugin {
 }
 
 page.includeCSS {
-    plugin_form = EXT:7timer_extension/Resources/Public/CSS/7timer_plugin.css
+    plugin_form = EXT:ext7timer/Resources/Public/CSS/7timer_plugin.css
 }
 
 # these classes are only used in auto-generated templates
-plugin.tx_7timerextension._CSS_DEFAULT_STYLE (
+plugin.tx_ext7timer._CSS_DEFAULT_STYLE (
     textarea.f3-form-error {
         background-color:#FF9F9F;
         border: 1px #FF0000 solid;

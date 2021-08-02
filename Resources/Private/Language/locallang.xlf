@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:7timer_extension/Resources/Private/Language/locallang" date="2021-07-29T08:55:55Z" product-name="7timer_extension">
+	<file source-language="en" datatype="plaintext" original="EXT:ext7timer/Resources/Private/Language/locallang" date="2021-07-29T08:55:55Z" product-name="ext7timer">
 		<header/>
 		<body>
-			<trans-unit id="tx_7timerextension_domain_model_configuration" resname="tx_7timerextension_domain_model_configuration">
+			<trans-unit id="tx_ext7timer_domain_model_configuration" resname="tx_ext7timer_domain_model_configuration">
 				<source>Configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_7timerextension_domain_model_configuration.label" resname="tx_7timerextension_domain_model_configuration.label">
+			<trans-unit id="tx_ext7timer_domain_model_configuration.label" resname="tx_ext7timer_domain_model_configuration.label">
 				<source>Label</source>
 			</trans-unit>
-			<trans-unit id="tx_7timerextension_domain_model_configuration.lon" resname="tx_7timerextension_domain_model_configuration.lon">
+			<trans-unit id="tx_ext7timer_domain_model_configuration.lon" resname="tx_ext7timer_domain_model_configuration.lon">
 				<source>Lon</source>
 			</trans-unit>
-			<trans-unit id="tx_7timerextension_domain_model_configuration.lat" resname="tx_7timerextension_domain_model_configuration.lat">
+			<trans-unit id="tx_ext7timer_domain_model_configuration.lat" resname="tx_ext7timer_domain_model_configuration.lat">
 				<source>Lat</source>
 			</trans-unit>
-			<trans-unit id="tx_7timerextension_domain_model_configuration.type" resname="tx_7timerextension_domain_model_configuration.type">
+			<trans-unit id="tx_ext7timer_domain_model_configuration.type" resname="tx_ext7timer_domain_model_configuration.type">
 				<source>Type</source>
 			</trans-unit>
 		</body>
