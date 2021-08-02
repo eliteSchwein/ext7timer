@@ -1,6 +1,6 @@
 <?php
 
-use ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController;
+use ThomasLudwig\7timerExtension\Controller\ConfigurationController;
 
 defined('TYPO3_MODE') || die();
 
