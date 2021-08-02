@@ -5,5 +5,5 @@ defined('TYPO3_MODE') || die();
     'Typo37timerExtension',
     '7timerextensionplugin',
     '7Timer Plugin',
-    'EXT:typo3_7timer_extension/Resources/Public/Icons/user_plugin_7timerextensionplugin.svg'
+    'EXT:typo3_7timer_extension/Resources/Public/Icons/7timer_logo.gif'
 );
