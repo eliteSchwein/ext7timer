@@ -21,7 +21,7 @@ call_user_func(static function() {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     7timerextensionplugin {
-                        iconIdentifier = typo3__7timer_extension-plugin-7timerextensionplugin
+                        iconIdentifier = typo3_7timer_extension-plugin-7timerextensionplugin
                         title = LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo3_7timer_extension_7timerextensionplugin.name
                         description = LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo3_7timer_extension_7timerextensionplugin.description
                         tt_content_defValues {
