@@ -23,7 +23,7 @@ call_user_func(static function() {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     7timerextensionplugin {
-                        iconIdentifier = 7timer_extension-plugin-7timerextensionplugin
+                        iconIdentifier = 7timer_extension-plugin-7timerplugin
                         title = LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timer_extension_7timerplugin.name
                         description = LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timer_extension_7timerplugin.description
                         tt_content_defValues {
