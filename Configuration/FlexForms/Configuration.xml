@@ -16,9 +16,9 @@
                                 <renderType>selectSingle</renderType>
                                 <foreign_table>tx_typo37timerextension_domain_model_configuration</foreign_table>
                                 <foreign_field></foreign_field>
-                                <foreign_match_fields type="array">
+                                <!--<foreign_match_fields type="array">
                                     <parentidentifier>flexform.inputs</parentidentifier>
-                                </foreign_match_fields>
+                                </foreign_match_fields>-->
                                 <maxitems>9999</maxitems>
                                 <appearance type="array">
                                     <showSynchronizationLink>1</showSynchronizationLink>
