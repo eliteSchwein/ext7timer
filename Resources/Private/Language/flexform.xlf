@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:typo37timer_extension/Resources/Private/Language/locallang_db" date="2021-07-19T06:06:52Z" product-name="typo37timer_extension">
+	<file source-language="en" datatype="plaintext" original="EXT:7timer_extension/Resources/Private/Language/locallang_db" date="2021-07-19T06:06:52Z" product-name="7timer_extension">
 		<header/>
 		<body>
-			<trans-unit id="tx_typo37timerextension_7timerextensionplugin.flexform.name" resname="tx_typo37timerextension_7timerextensionplugin.flexform.name">
+			<trans-unit id="tx_7timerextension_7timerplugin.flexform.name" resname="tx_7timerextension_7timerplugin.flexform.name">
 				<source>Select Location</source>
 			</trans-unit>
 		</body>

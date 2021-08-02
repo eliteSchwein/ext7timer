@@ -1,7 +1,7 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo37timerextension_domain_model_configuration',
+        'title' => 'LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timerextension_domain_model_configuration',
         'label' => 'label',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -17,7 +17,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'label',
-        'iconfile' => 'EXT:typo3_7timer_extension/Resources/Public/Icons/tx_typo37timerextension_domain_model_configuration.gif'
+        'iconfile' => 'EXT:7timer_extension/Resources/Public/Icons/tx_7timerextension_domain_model_configuration.gif'
     ],
     'types' => [
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, label, lon, lat, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
@@ -50,8 +50,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_typo37timerextension_domain_model_configuration',
-                'foreign_table_where' => 'AND {#tx_typo37timerextension_domain_model_configuration}.{#pid}=###CURRENT_PID### AND {#tx_typo37timerextension_domain_model_configuration}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_7timerextension_domain_model_configuration',
+                'foreign_table_where' => 'AND {#tx_7timerextension_domain_model_configuration}.{#pid}=###CURRENT_PID### AND {#tx_7timerextension_domain_model_configuration}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -106,7 +106,7 @@ return [
 
         'label' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo37timerextension_domain_model_configuration.label',
+            'label' => 'LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timerextension_domain_model_configuration.label',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -116,7 +116,7 @@ return [
         ],
         'lon' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo37timerextension_domain_model_configuration.lon',
+            'label' => 'LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timerextension_domain_model_configuration.lon',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -125,7 +125,7 @@ return [
         ],
         'lat' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_typo37timerextension_domain_model_configuration.lat',
+            'label' => 'LLL:EXT:7timer_extension/Resources/Private/Language/locallang_db.xlf:tx_7timerextension_domain_model_configuration.lat',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
