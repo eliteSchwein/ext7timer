@@ -10,7 +10,7 @@
                 <el>
                     <inputs>
                         <TCEforms>
-                            <label>LLL:EXT:typo3_7timer_extension/Resources/Private/Language/flexform.xlf:tx_typo3_7timer_extension_7timerextensionplugin.flexform.name</label>
+                            <label>LLL:EXT:typo37timer_extension/Resources/Private/Language/flexform.xlf:tx_typo37timer_extension_7timerextensionplugin.flexform.name</label>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>

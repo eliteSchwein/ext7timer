@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:typo3_7timer_extension/Resources/Private/Language/locallang_db" date="2021-07-29T08:55:55Z" product-name="typo3_7timer_extension">
+	<file source-language="en" datatype="plaintext" original="EXT:typo37timer_extension/Resources/Private/Language/locallang_db" date="2021-07-29T08:55:55Z" product-name="typo37timer_extension">
 		<header/>
 		<body>
 			<trans-unit id="tx_typo37timerextension_domain_model_configuration" resname="tx_typo37timerextension_domain_model_configuration">
@@ -18,10 +18,10 @@
 			<trans-unit id="tx_typo37timerextension_domain_model_configuration.type" resname="tx_typo37timerextension_domain_model_configuration.type">
 				<source>Type</source>
 			</trans-unit>
-			<trans-unit id="tx_typo3_7timer_extension_7timerextensionplugin.name" resname="tx_typo3_7timer_extension_7timerextensionplugin.name">
+			<trans-unit id="tx_typo37timerextension_7timerextensionplugin.name" resname="tx_typo37timerextension_7timerextensionplugin.name">
 				<source>7Timer Plugin</source>
 			</trans-unit>
-			<trans-unit id="tx_typo3_7timer_extension_7timerextensionplugin.description" resname="tx_typo3_7timer_extension_7timerextensionplugin.description">
+			<trans-unit id="tx_typo37timerextension_7timerextensionplugin.description" resname="tx_typo37timerextension_7timerextensionplugin.description">
 				<source></source>
 			</trans-unit>
 		</body>

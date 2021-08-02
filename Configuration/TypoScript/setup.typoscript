@@ -2,11 +2,11 @@ page = PAGE
 
 plugin.tx_typo37timerextension_7timerextensionplugin {
     view {
-        templateRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Templates/
+        templateRootPaths.0 = EXT:typo37timer_extension/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.templateRootPath}
-        partialRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Partials/
+        partialRootPaths.0 = EXT:typo37timer_extension/Resources/Private/Partials/
         partialRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.partialRootPath}
-        layoutRootPaths.0 = EXT:typo3_7timer_extension/Resources/Private/Layouts/
+        layoutRootPaths.0 = EXT:typo37timer_extension/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.layoutRootPath}
     }
     persistence {
@@ -26,7 +26,7 @@ plugin.tx_typo37timerextension_7timerextensionplugin {
 }
 
 page.includeCSS {
-    plugin_form = EXT:typo3_7timer_extension/Resources/Public/CSS/7timer_plugin.css
+    plugin_form = EXT:typo37timer_extension/Resources/Public/CSS/7timer_plugin.css
 }
 
 # these classes are only used in auto-generated templates
