@@ -8,7 +8,7 @@ call_user_func(static function() {
 
     $pluginSignature = 'typo3_7timer_extension_7timerextensionplugin';
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-    ExtensionManagementUtility::addPiFlexFormValue(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         $pluginSignature,
         'FILE:EXT:typo3_7timer_extension/Configuration/FlexForms/Configuration.xml'
     );
