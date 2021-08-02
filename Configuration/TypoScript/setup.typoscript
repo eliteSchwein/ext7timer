@@ -10,7 +10,7 @@ plugin.tx_typo37timerextension_7timerextensionplugin {
         layoutRootPaths.1 = {$plugin.tx_typo37timerextension_7timerextensionplugin.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_typo37timerextension_7timerextensionplugin.persistence.storagePid}
+        storagePid = {$plugin.tx_typo3_7timerextension_7timerextensionplugin.persistence.storagePid}
         #recursive = 1
     }
     features {
