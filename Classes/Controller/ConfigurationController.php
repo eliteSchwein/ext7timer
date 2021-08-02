@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\7timerExtension\Controller;
+namespace ThomasLudwig\ext7timer\Controller;
 
 
-use ThomasLudwig\Typo37timerExtension\Domain\Repository\ConfigurationRepository;
+use ThomasLudwig\ext7timer\Domain\Model\Configuration;
+use ThomasLudwig\ext7timer\Domain\Repository\ConfigurationRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -41,7 +42,6 @@ class ConfigurationController extends ActionController
     /**
      * action list
      *
-     * @param \ThomasLudwig\7timerExtension\Domain\Model\Configuration $configuration
      * @return string|object|null|void
      */
     public function listAction()
