@@ -9,7 +9,7 @@ call_user_func(static function() {
         'Typo37timerExtension',
         '7timerextensionplugin',
         [
-            ConfigurationController::class => 'list, show'
+            ConfigurationController::class => 'list'
         ],
         // non-cacheable actions
         [
