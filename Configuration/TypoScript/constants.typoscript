@@ -1,11 +1,11 @@
 plugin.tx_typo37timerextension_7timerextensionplugin {
     view {
         # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:typo37timer_extension/Resources/Private/Templates/
+        templateRootPath = EXT:typo3_7timer_extension/Resources/Private/Templates/
         # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:typo37timer_extension/Resources/Private/Partials/
+        partialRootPath = EXT:typo3_7timer_extension/Resources/Private/Partials/
         # cat=plugin.tx_typo37timerextension_7timerextensionplugin/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:typo37timer_extension/Resources/Private/Layouts/
+        layoutRootPath = EXT:typo3_7timer_extension/Resources/Private/Layouts/
     }
     persistence {
         # cat=plugin.tx_typo37timerextension_7timerextensionplugin//a; type=string; label=Default storage PID
