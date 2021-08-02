@@ -1,5 +1,5 @@
 {
-    "name": "thomas-ludwig/typo3-7timer-extension",
+    "name": "thomas-ludwig/7timer-extension",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": [
@@ -17,16 +17,16 @@
     },
     "autoload": {
         "psr-4": {
-            "ThomasLudwig\\Typo37timerExtension\\": "Classes"
+            "ThomasLudwig\\ext7timer\\": "Classes"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ThomasLudwig\\Typo37timerExtension\\Tests\\": "Tests"
+            "ThomasLudwig\\ext7timer\\Tests\\": "Tests"
         }
     },
     "replace": {
-        "typo3-ter/typo3-7timer-extension": "self.version"
+        "typo3-ter/7timer-extension": "self.version"
     },
     "config": {
         "vendor-dir": ".Build/vendor",
@@ -41,7 +41,7 @@
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/public",
-            "extension-key": "typo3_7timer_extension"
+            "extension-key": "7timer_extension"
         }
     }
 }
