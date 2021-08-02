@@ -1,5 +1,7 @@
 <?php
 
+use ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController;
+
 defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
@@ -7,11 +9,11 @@ call_user_func(static function() {
         'Typo37timerExtension',
         '7timerextensionplugin',
         [
-            \ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => 'list'
+            ConfigurationController::class => 'list'
         ],
         // non-cacheable actions
         [
-            \ThomasLudwig\Typo37timerExtension\Controller\ConfigurationController::class => 'list'
+            ConfigurationController::class => 'list'
         ]
     );
 
