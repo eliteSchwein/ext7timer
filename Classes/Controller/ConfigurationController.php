@@ -38,7 +38,7 @@ class ConfigurationController extends ActionController
     }
 
     /**
-     * action show
+     * action list
      *
      * @param \ThomasLudwig\Typo37timerExtension\Domain\Model\Configuration $configuration
      * @return string|object|null|void
