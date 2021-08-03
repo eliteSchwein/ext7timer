@@ -120,7 +120,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2'
+                'eval' => 'double6'
             ]
         ],
         'lat' => [
@@ -129,7 +129,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2'
+                'eval' => 'double6'
             ]
         ],
     ],
