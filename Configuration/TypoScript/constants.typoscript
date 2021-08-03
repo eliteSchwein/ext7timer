@@ -9,6 +9,6 @@ plugin.tx_ext7timer_plugin7timer {
     }
     persistence {
         # cat=plugin.tx_ext7timer_plugin7timer//a; type=string; label=Default storage PID
-        storagePid =
+        storagePid = 83
     }
 }
