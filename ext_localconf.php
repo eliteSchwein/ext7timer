@@ -1,12 +1,12 @@
 <?php
 
-use ThomasLudwig\Ext7timer\Controller\TimerController;
+use ThomasLudwig\Ext7Timer\Controller\TimerController;
 
 defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Ext7timer',
+        'Ext7Timer',
         'plugin7timer',
         [
             TimerController::class => 'list'

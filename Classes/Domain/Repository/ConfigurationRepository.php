@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\Ext7timer\Domain\Repository;
+namespace ThomasLudwig\Ext7Timer\Domain\Repository;
 
 
 use TYPO3\CMS\Extbase\Persistence\Repository;

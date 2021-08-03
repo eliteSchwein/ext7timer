@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\Ext7timer\Domain\Model;
+namespace ThomasLudwig\Ext7Timer\Domain\Model;
 
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
