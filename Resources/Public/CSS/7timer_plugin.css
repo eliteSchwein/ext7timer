@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.ext7timer_hide {
+    opacity: 0;
+}
+
+.ext7timer_preloader_ring {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.ext7timer_preloader_ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #000000;
+    border-radius: 50%;
+    animation: ext7timer_preloader_ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000000 transparent transparent transparent;
+}
+.ext7timer_preloader_ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.ext7timer_preloader_ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.ext7timer_preloader_ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes ext7timer_preloader_ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#ext7timer_container {
+    min-height: 170px;
+}
+.ext7timer_text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+}
+#ext7timer_content {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+
+}
+
+.ext7timer_day_background {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background: rgb(133,255,249);
+    background: linear-gradient(323deg, rgba(133,255,249,1) 0%, rgba(208,251,255,1) 38%, rgba(255,255,255,1) 100%);
+}
+.ext7timer_day_background .ext7timer_text {
+    color: black;
+}
+
+.ext7timer_night_background {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,14,138);
+    background: linear-gradient(323deg, rgba(0,14,138,1) 0%, rgba(1,0,85,1) 38%, rgba(0,5,74,1) 100%);
+}
+.ext7timer_night_background .ext7timer_text {
+    color: white;
+}
+
+#ext7timer_preloader {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,170,170);
+    background: linear-gradient(323deg, rgba(0,170,170,1) 0%, rgba(0,202,209,1) 38%, rgba(0,251,255,1) 100%);
+}
+
+#ext7timer_error {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background: rgb(95,0,0);
+    background: linear-gradient(323deg, rgba(95,0,0,1) 0%, rgba(128,0,0,1) 38%, rgba(179,0,0,1) 100%);
+}
+
+#ext7timer_error .ext7timer_text {
+    color: #fff
+}

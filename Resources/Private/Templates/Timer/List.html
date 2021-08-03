@@ -1,0 +1,81 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <f:debug>{configuration}</f:debug>
+    <div id="ext7timer_container">
+        <div id="ext7timer_preloader">
+            <div class="ext7timer_preloader_ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="ext7timer_text">
+                Please wait 7Timer! is currently loading...
+            </div>
+        </div>
+        <div id="ext7timer_error" class="ext7timer_hide">
+            <div class="ext7timer_text">
+                An Error Occured!
+            </div>
+        </div>
+        <div id="ext7timer_content" class="ext7timer_hide">
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        const date = new Date()
+
+        let hour = date.getHours()
+
+        setInterval(() => {
+            hour = date.getHours()
+            updateBackground()
+        }, 1000*30);
+
+        updateBackground()
+
+        function updateBackground() {
+            const contentParent = document.getElementById('ext7timer_content')
+            if(hour > 6 && hour < 18) {
+                contentParent.classList.remove('ext7timer_night_background')
+                contentParent.classList.add('ext7timer_day_background')
+                return
+            }
+            contentParent.classList.remove('ext7timer_day_background')
+            contentParent.classList.add('ext7timer_night_background')
+        }
+    </script>
+    <script>
+        const url = 'http://www.7timer.info/bin/api.pl?lon=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&product=astro&output=json'
+        const preloaderParent = document.getElementById('ext7timer_preloader')
+
+        function parseWeatherData(data) {
+            console.log(data)
+        }
+
+        function retrieveData() {
+            $.ajax({
+                type: 'GET',
+                url: url,
+                error: function() {
+                    const errorParent = document.getElementById('ext7timer_error')
+                    errorParent.classList.remove('ext7timer_hide')
+                    preloaderParent.classList.add('ext7timer_hide')
+                },
+                success: function(data) {
+                    const successParent = document.getElementById('ext7timer_content')
+                    successParent.classList.remove('ext7timer_hide')
+                    preloaderParent.classList.add('ext7timer_hide')
+                    parseWeatherData(data)
+                }
+            });
+        }
+
+        retrieveData()
+    </script>
+</f:section>
+</html>
