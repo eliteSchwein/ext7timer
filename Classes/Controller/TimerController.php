@@ -46,7 +46,7 @@ class TimerController extends ActionController
      */
     public function listAction()
     {
-        $configuration = $this->configurationRepository->fetchAll();
+        $configuration = $this->configurationRepository->findAll();
         $this->view->assign('configuration', $configuration);
     }
 }
