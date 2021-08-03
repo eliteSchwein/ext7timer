@@ -6,7 +6,7 @@ namespace ThomasLudwig\Ext7Timer\Controller;
 
 
 use ThomasLudwig\ext7timer\Domain\Model\Configuration;
-use ThomasLudwig\ext7timer\Domain\Repository\ConfigurationRepository;
+use ThomasLudwig\Ext7Timer\Domain\Repository\ConfigurationRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
