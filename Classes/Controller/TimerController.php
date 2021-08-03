@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\ext7timer\Controller;
+namespace ThomasLudwig\Ext7timer\Controller;
 
 
 use ThomasLudwig\ext7timer\Domain\Model\Configuration;
