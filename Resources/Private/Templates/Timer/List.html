@@ -14,12 +14,15 @@
                 Please wait 7Timer! is currently loading...
             </div>
         </div>
-        <div id="ext7timer_error" class="ext7timer_hide">
+        <div id="ext7timer_content" class="ext7timer_hide">
             <div class="ext7timer_text">
                 An Error Occured!
             </div>
+            <button class="ext7timer_button" id="ext7timer_reconnect" @click="reconnect()">
+                Reconnect
+            </button>
         </div>
-        <div id="ext7timer_content" class="ext7timer_hide">
+        <div id="ext7timer_error" class="ext7timer_hide">
 
         </div>
     </div>
@@ -51,6 +54,13 @@
     <script>
         const url = 'http://www.7timer.info/bin/api.pl?lon=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&product=astro&output=json'
         const preloaderParent = document.getElementById('ext7timer_preloader')
+        const errorParent = document.getElementById('ext7timer_error')
+        const successParent = document.getElementById('ext7timer_content')
+
+        function reconnect() {
+            successParent.classList.add('ext7timer_hide')
+            errorParent.classList.add('ext7timer_hide')
+        }
 
         function parseWeatherData(data) {
             console.log(data)
@@ -61,12 +71,10 @@
                 type: 'GET',
                 url: url,
                 error: function() {
-                    const errorParent = document.getElementById('ext7timer_error')
                     errorParent.classList.remove('ext7timer_hide')
                     preloaderParent.classList.add('ext7timer_hide')
                 },
                 success: function(data) {
-                    const successParent = document.getElementById('ext7timer_content')
                     successParent.classList.remove('ext7timer_hide')
                     preloaderParent.classList.add('ext7timer_hide')
                     parseWeatherData(data)
