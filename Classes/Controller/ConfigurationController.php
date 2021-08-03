@@ -21,7 +21,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 /**
  * ConfigurationController
  */
-class TimerController extends ActionController
+class ConfigurationController extends ActionController
 {
 
     /**

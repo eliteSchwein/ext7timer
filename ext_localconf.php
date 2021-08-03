@@ -1,19 +1,19 @@
 <?php
 
-use ThomasLudwig\Ext7Timer\Controller\TimerController;
+use ThomasLudwig\Ext7Timer\Controller\ConfigurationController;
 
 defined('TYPO3_MODE') || die();
 
 call_user_func(static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Ext7Timer',
-        'plugin7timer',
+        'Ext7timer',
+        'Plugin7timer',
         [
-            TimerController::class => 'list'
+            \ThomasLudwig\Ext7timer\Controller\ConfigurationController::class => 'list'
         ],
         // non-cacheable actions
         [
-            TimerController::class => 'list'
+            \ThomasLudwig\Ext7timer\Controller\ConfigurationController::class => ''
         ]
     );
 
