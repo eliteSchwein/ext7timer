@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ThomasLudwig\Ext7Timer\Controller;
+namespace ThomasLudwig\Ext7timer\Controller;
 
-
-use ThomasLudwig\ext7timer\Domain\Model\Configuration;
-use ThomasLudwig\Ext7Timer\Domain\Repository\ConfigurationRepository;
+use ThomasLudwig\ext7timer\Domain\Repository\ConfigurationRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -21,7 +19,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 /**
  * ConfigurationController
  */
-class ConfigurationController extends ActionController
+class TimerController extends ActionController
 {
 
     /**
@@ -46,7 +44,8 @@ class ConfigurationController extends ActionController
      */
     public function listAction()
     {
-        $configuration = $this->configurationRepository->findAll();
+        $configurationRepo = $this->configurationRepository->findAll();
+        $configuration = $configurationRepo->getFirst();
         $this->view->assign('configuration', $configuration);
     }
 }
