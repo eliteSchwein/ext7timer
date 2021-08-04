@@ -18,16 +18,18 @@
             <div class="ext7timer_text">
                 An Error Occured!
             </div>
-            <button id="ext7timer_reconnect" onclick="reconnect()">
+            <button id="ext7timer_reconnect" class="ext7timer_button" onclick="reconnect()">
                 Refresh
             </button>
         </div>
         <div id="ext7timer_content" class="ext7timer_hide">
-
+            <div id="ext7timer_date_picker"></div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    </script>
     <script>
         const date = new Date()
 
@@ -52,10 +54,16 @@
         }
     </script>
     <script>
+        const timezoneUrl = 'http://api.geonames.org/timezoneJSON?lng=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&username=eliteschw31n'
         const url = 'http://www.7timer.info/bin/api.pl?lon=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&product=civil&output=json'
         const preloaderParent = document.getElementById('ext7timer_preloader')
         const errorParent = document.getElementById('ext7timer_error')
         const successParent = document.getElementById('ext7timer_content')
+        const buttonRow = document.getElementById('ext7timer_date_picker')
+
+        let timezone
+        let weatherData
+        let parsedWeatherData = {}
 
         function reconnect() {
             successParent.classList.add('ext7timer_hide')
@@ -64,11 +72,89 @@
             retrieveData()
         }
 
-        function parseWeatherData(data) {
-            console.log(data)
+        function changeDate(newDate) {
+            let day = newDate.split('.')[0]
+            for(let elementIndex in buttonRow.children) {
+                let element = buttonRow.children[elementIndex]
+                if(element.tagName === 'BUTTON') {
+                    element.disabled = element.innerHTML === day
+                }
+            }
+        }
+
+        function generateDateButtons() {
+            buttonRow.innerHTML = '';
+            for(let index in Object.keys(parsedWeatherData)){
+                let weatherDate = Object.keys(parsedWeatherData)[index]
+                let button = document.createElement('button')
+                button.classList.add('ext7timer_button')
+                button.innerText = weatherDate.split('.')[0]
+                button.addEventListener('click', () => {
+                    changeDate(weatherDate)
+                })
+                if(index == 0) {
+                    button.disabled = true
+                }
+                buttonRow.appendChild(button)
+            }
+        }
+
+        function parseWeatherData() {
+            let timepoint = 0
+            let hour = timezone.dstOffset
+            let date = new Date(
+                weatherData.init.substring(0,4),
+                weatherData.init.substring(5,6),
+                weatherData.init.substring(7,8),
+                hour
+            )
+            let dateString = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`
+
+            let end = false
+
+            while (end === false) {
+                timepoint = timepoint + 3
+                timepointData = parseWeatherTimePoint(timepoint)
+                if(typeof (timepointData) === 'undefined') {
+                    end = true
+                    generateDateButtons()
+                    return
+                }
+                date.setHours(date.getHours() + 3)
+                dateString = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`
+                if(!Object.keys(parsedWeatherData).includes(dateString)) {
+                    parsedWeatherData[dateString] = {}
+                }
+                parsedWeatherData[dateString]
+                    [date.getHours()] = timepointData
+            }
+        }
+
+        function parseWeatherTimePoint(timepoint) {
+            for(let index in weatherData.dataseries) {
+                let timepointData = weatherData.dataseries[index]
+                if(timepointData.timepoint === timepoint) {
+                    return timepointData
+                }
+            }
         }
 
         function retrieveData() {
+            parsedWeatherData = {}
+            let failed = false
+            $.ajax({
+                type: 'GET',
+                url: timezoneUrl,
+                error: function() {
+                    errorParent.classList.remove('ext7timer_hide')
+                    preloaderParent.classList.add('ext7timer_hide')
+                    failed = true
+                },
+                success: function(data) {
+                    timezone = data
+                }
+            })
+            if(failed) { return }
             $.ajax({
                 type: 'GET',
                 url: url,
@@ -79,9 +165,10 @@
                 success: function(data) {
                     successParent.classList.remove('ext7timer_hide')
                     preloaderParent.classList.add('ext7timer_hide')
-                    parseWeatherData(data)
+                    weatherData = JSON.parse(data)
+                    parseWeatherData()
                 }
-            });
+            })
         }
 
         retrieveData()

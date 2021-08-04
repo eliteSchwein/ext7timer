@@ -2,7 +2,7 @@
 
 .ext7timer_hide {
     animation-delay: 0s;
-    animation: ext7timer_hider 2s linear forwards;
+    animation: ext7timer_hider 0.5s linear forwards;
 }
 
 @keyframes ext7timer_hider {
@@ -58,6 +58,11 @@
     font-weight: 300;
     text-align: center;
     font-size: 16px;
+}
+#ext7timer_date_picker {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
 }
 #ext7timer_content {
 
@@ -127,18 +132,45 @@
     color: #000
 }
 
+.ext7timer_button {
+    margin-left: 2px;
+    margin-right: 2px;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    background: #82828226;
+    color: #000000;
+    border: 0;
+    border-radius: 100px;
+    padding: 0px 12px;
+}
+
+.ext7timer_night_background .ext7timer_button {
+    color: #ffffff;
+    background: rgba(98, 98, 98, 0.27);
+}
+
 #ext7timer_reconnect {
+    bottom: 30px;
+    position: absolute;
+    margin-left: 2px;
+    margin-right: 2px;
     transition-duration: 0.5s;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     background: transparent;
     border: 2px solid #000!important;
     border-radius: 100px;
     padding: 1px 15px;
-    bottom: 30px;
-    position: absolute;
 }
 #ext7timer_reconnect:hover {
     color: #6c6c6c;
     background: rgba(0, 0, 0, 0.45);
     border: 2px solid rgba(0, 0, 0, 0) !important;
+}
+.ext7timer_button:hover {
+    background: rgba(0, 0, 0, 0.45);
+    border: 0px!important;
+}
+.ext7timer_button:disabled {
+    background: rgba(0, 0, 0, 0.45);
+    border: 0px!important;
 }
