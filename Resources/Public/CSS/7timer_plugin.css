@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .ext7timer_hide {
-    opacity: 0;
+    animation-delay: 0s;
+    animation: ext7timer_hider 2s linear forwards;
+}
+
+@keyframes ext7timer_hider {
+    0% { opacity: 1; }
+    99.999% { opacity: 0; }
+    100% {  opacity: 0; visibility: hidden; }
 }
 
 .ext7timer_preloader_ring {
@@ -44,6 +51,7 @@
 
 #ext7timer_container {
     min-height: 170px;
+    position: relative;
 }
 .ext7timer_text {
     font-family: 'Roboto', sans-serif;
@@ -52,8 +60,6 @@
     font-size: 16px;
 }
 #ext7timer_content {
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
 
 }
 
@@ -90,8 +96,7 @@
 }
 
 #ext7timer_preloader {
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
+    z-index: 10;
     position: absolute;
     display: flex;
     height: 100%;
@@ -105,8 +110,6 @@
 }
 
 #ext7timer_error {
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
     position: absolute;
     display: flex;
     height: 100%;
@@ -120,5 +123,22 @@
 }
 
 #ext7timer_error .ext7timer_text {
-    color: #fff
+    font-size: 20px;
+    color: #000
+}
+
+#ext7timer_reconnect {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    background: transparent;
+    border: 2px solid #000!important;
+    border-radius: 100px;
+    padding: 1px 15px;
+    bottom: 30px;
+    position: absolute;
+}
+#ext7timer_reconnect:hover {
+    color: #6c6c6c;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(0, 0, 0, 0) !important;
 }
