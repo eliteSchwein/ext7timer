@@ -27,6 +27,7 @@ plugin.tx_ext7timer_plugin7timer {
 
 page.includeCSS {
     plugin_form = EXT:ext7timer/Resources/Public/CSS/7timer_plugin.css
+    plugin_images = EXT:ext7timer/Resources/Public/CSS/7timer_images.css
 }
 
 # these classes are only used in auto-generated templates

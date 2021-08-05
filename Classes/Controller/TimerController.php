@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ThomasLudwig\Ext7timer\Controller;
 
 use ThomasLudwig\ext7timer\Domain\Repository\ConfigurationRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -45,7 +46,19 @@ class TimerController extends ActionController
     public function listAction()
     {
         $configurationRepo = $this->configurationRepository->findAll();
-        $configuration = $configurationRepo->getFirst();
+        $configuration = $this->getCoords($this->settings, $configurationRepo);
         $this->view->assign('configuration', $configuration);
+    }
+
+    private function getCoords($settings, $repo) {
+        if(empty($settings)) {
+            return $repo->getFirst();
+        }
+        foreach ($repo as $key => $value) {
+            if($value->getUid() == $settings['coords']) {
+                return $value;
+            }
+        }
+        return null;
     }
 }

@@ -23,7 +23,11 @@
             </button>
         </div>
         <div id="ext7timer_content" class="ext7timer_hide">
+            <div id="ext7timer_day_content"></div>
             <div id="ext7timer_date_picker"></div>
+            <div id="ext7timer_city_label">
+                <f:format.raw>{configuration.label}</f:format.raw>
+            </div>
         </div>
     </div>
 
@@ -60,6 +64,7 @@
         const errorParent = document.getElementById('ext7timer_error')
         const successParent = document.getElementById('ext7timer_content')
         const buttonRow = document.getElementById('ext7timer_date_picker')
+        const weatherRow = document.getElementById('ext7timer_day_content')
 
         let timezone
         let weatherData
@@ -80,6 +85,41 @@
                     element.disabled = element.innerHTML === day
                 }
             }
+            weatherRow.innerHTML = '';
+            console.log(parsedWeatherData)
+            console.log(Object.keys(parsedWeatherData[newDate]))
+            for(let index in Object.keys(parsedWeatherData[newDate])){
+                let hour = Object.keys(parsedWeatherData[newDate])[index]
+                let hourData = parsedWeatherData[newDate][hour]
+                let hourElement = document.createElement('div')
+                hourElement.classList.add('ext7timer_weather_state')
+
+                let timeLabel = document.createElement('div')
+                timeLabel.classList.add('ext7timer_weather_label')
+                timeLabel.innerText = `${hour}:00`
+
+                hourElement.appendChild(timeLabel)
+
+                let img = document.createElement('div')
+                img.classList.add('ext7timer_weather_image')
+                img.classList.add(`ext7timer_weather_${hourData.weather}`)
+
+                hourElement.appendChild(img)
+
+                if(hourData.wind10m.speed >= 5) {
+                    let imgHighWind = document.createElement('div')
+                    imgHighWind.classList.add(`ext7timer_weather_highwind`)
+                    img.appendChild(imgHighWind)
+                }
+
+                let dataLabel = document.createElement('div')
+                dataLabel.classList.add('ext7timer_weather_label')
+                dataLabel.innerText = `🌡${hourData.temp2m}°C 💧${hourData.rh2m}`
+
+                hourElement.appendChild(dataLabel)
+
+                weatherRow.appendChild(hourElement)
+            }
         }
 
         function generateDateButtons() {
@@ -92,11 +132,9 @@
                 button.addEventListener('click', () => {
                     changeDate(weatherDate)
                 })
-                if(index == 0) {
-                    button.disabled = true
-                }
                 buttonRow.appendChild(button)
             }
+            changeDate(Object.keys(parsedWeatherData)[0])
         }
 
         function parseWeatherData() {

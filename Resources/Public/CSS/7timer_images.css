@@ -1,0 +1,129 @@
+
+
+.ext7timer_weather_cloudynight, .ext7timer_weather_cloudyday {
+    background-image: url("../Icons/cloudy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_lightrainday, .ext7timer_weather_lightrainnight {
+    background-image: url("../Icons/light_rain.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_mcloudyday {
+    background-image: url("../Icons/mid_cloudy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_mcloudynight {
+    background-image: url("../Icons/mid_cloudy_night.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_clearday {
+    background-image: url("../Icons/sunny.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_clearnight {
+    background-image: url("../Icons/night.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_ishowerday, .ext7timer_weather_oshowerday {
+    background-image: url("../Icons/lighter_rain.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_ishowernight, .ext7timer_weather_oshowernight {
+    background-image: url("../Icons/lighter_rain_night.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_humidday {
+    background-image: url("../Icons/sunny_fog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_humidnight {
+    background-image: url("../Icons/night_fog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_pcloudyday {
+    background-image: url("../Icons/light_cloudy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_pcloudynight {
+    background-image: url("../Icons/light_cloudy_night.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_highwind {
+    height: 100%;
+    background-image: url("../Icons/strong_wind.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_rainday, .ext7timer_weather_rainnight  {
+    background-image: url("../Icons/rain.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_tsday, .ext7timer_weather_tsnight  {
+    background-image: url("../Icons/possible_storm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_tsrainday, .ext7timer_weather_tsrainnight  {
+    background-image: url("../Icons/storm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_lightsnowday, .ext7timer_weather_lightsnownight,
+.ext7timer_weather_snowday, .ext7timer_weather_snownight{
+    background-image: url("../Icons/snow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ext7timer_weather_rainsnowday, .ext7timer_weather_rainsnownight {
+    background-image: url("../Icons/snow_rain.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

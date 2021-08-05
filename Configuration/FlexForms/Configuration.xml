@@ -8,7 +8,7 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <inputs>
+                    <settings.coords>
                         <TCEforms>
                             <label>LLL:EXT:ext7timer/Resources/Private/Language/flexform.xlf:tx_ext7timer_plugin7timer.flexform.name</label>
                             <config>
@@ -17,7 +17,7 @@
                                 <foreign_table>tx_ext7timer_domain_model_configuration</foreign_table>
                                 <foreign_field></foreign_field>
                                 <foreign_match_fields type="array">
-                                    <parentidentifier>flexform.inputs</parentidentifier>
+                                    <parentidentifier>flexform.label</parentidentifier>
                                 </foreign_match_fields>
                                 <maxitems>9999</maxitems>
                                 <appearance type="array">
@@ -27,7 +27,7 @@
                                 </appearance>
                             </config>
                         </TCEforms>
-                    </inputs>
+                    </settings.coords>
                 </el>
             </ROOT>
         </sDEF>
