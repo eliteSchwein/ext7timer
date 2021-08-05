@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 .ext7timer_hide {
-    animation-delay: 0s;
-    animation: ext7timer_hider 0.5s linear forwards;
-}
-
-@keyframes ext7timer_hider {
-    0% { opacity: 1; }
-    99.999% { opacity: 0; }
-    100% {  opacity: 0; visibility: hidden; }
+    display: none!important;
 }
 
 .ext7timer_preloader_ring {
@@ -52,6 +46,8 @@
 #ext7timer_container {
     min-height: 170px;
     position: relative;
+    display: flex;
+    align-items: stretch;
 }
 .ext7timer_text {
     font-family: 'Roboto', sans-serif;
@@ -65,18 +61,15 @@
     bottom: 6px;
 }
 #ext7timer_content {
-
-}
-
-.ext7timer_day_background {
-    position: absolute;
     display: flex;
-    height: 100%;
     width: 100%;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
     align-items: center;
+}
+
+.ext7timer_day_background {
     background: rgb(133,255,249);
     background: linear-gradient(323deg, rgba(133,255,249,1) 0%, rgba(208,251,255,1) 38%, rgba(255,255,255,1) 100%);
 }
@@ -85,14 +78,6 @@
 }
 
 .ext7timer_night_background {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
     background: rgb(0,14,138);
     background: linear-gradient(323deg, rgba(0,14,138,1) 0%, rgba(1,0,85,1) 38%, rgba(0,5,74,1) 100%);
 }
@@ -102,10 +87,9 @@
 
 #ext7timer_preloader {
     z-index: 10;
-    position: absolute;
     display: flex;
-    height: 100%;
     width: 100%;
+    min-height:100%;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
@@ -115,9 +99,7 @@
 }
 
 #ext7timer_error {
-    position: absolute;
     display: flex;
-    height: 100%;
     width: 100%;
     flex-wrap: nowrap;
     align-content: space-around;
@@ -193,6 +175,7 @@
 }
 
 .ext7timer_weather_label {
+    letter-spacing: -1px;
     margin-left: 2px;
     margin-right: 2px;
     background: #82828226;
@@ -210,6 +193,7 @@
 .ext7timer_weather_image {
     width: 70px;
     height: 70px;
+    min-height: 70px;
     margin-bottom: 5px;
     margin-top: 5px;
     border-radius: 50%;
@@ -220,6 +204,11 @@
 
 .ext7timer_night_background .ext7timer_weather_image {
     background-color: rgba(98, 98, 98, 0.27);
+}
+#ext7timer_city_label:hover,
+#ext7timer_city_label:active,
+#ext7timer_city_label:focus {
+    background: rgba(0, 0, 0, 0.45);
 }
 #ext7timer_city_label {
     position: absolute;
@@ -235,7 +224,91 @@
     border-radius: 100px;
     padding: 0px 12px;
 }
+#ext7timer_city_label select{
+    margin-right: 12px;
+    background: rgba(0,0,0,0);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+#ext7timer_city_label select:focus,
+#ext7timer_city_label select:focus-visible {
+    outline: 0;
+    border: none;
+}
+
+#ext7timer_city_label::before {
+    font-family: 'fontello';
+    content: "";
+    font-size: 15px;
+    position: absolute;
+    right: 9px;
+    top: 2px;
+}
 .ext7timer_night_background #ext7timer_city_label {
     background-color: rgba(98, 98, 98, 0.27);
     color: #fff;
+}
+
+.ext7timer_night_background #ext7timer_city_label select{
+    color: #fff;
+}
+#ext7timer_city_label select option{
+    background: #e6fdff;
+    color: #000000;
+}
+.ext7timer_night_background #ext7timer_city_label select option{
+    background: #01034f;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #ext7timer_day_content {
+        justify-content: space-around;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, auto);
+        padding-bottom: 0px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+    #ext7timer_date_picker {
+        position: relative;
+        right: 0;
+        display: flex;
+        bottom: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #ext7timer_city_label {
+        position: relative;
+        margin-bottom: 3px;
+        left: 0;
+        margin-top: 2px;
+    }
+    #ext7timer_content {
+        flex-direction: column;
+    }
+    #ext7timer_container {
+        height: auto
+    }
+    .ext7timer_weather_state {
+        display: flex;
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .ext7timer_button {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #ext7timer_day_content {
+        grid-template-rows: repeat(3, auto);
+    }
 }

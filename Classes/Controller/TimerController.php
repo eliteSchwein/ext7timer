@@ -47,7 +47,8 @@ class TimerController extends ActionController
     {
         $configurationRepo = $this->configurationRepository->findAll();
         $configuration = $this->getCoords($this->settings, $configurationRepo);
-        $this->view->assign('configuration', $configuration);
+        $this->view->assign('default_configuration', $configuration);
+        $this->view->assign('configurations', $configurationRepo);
     }
 
     private function getCoords($settings, $repo) {

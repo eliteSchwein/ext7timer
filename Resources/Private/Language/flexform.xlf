@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="tx_ext7timer_plugin7timer.flexform.name" resname="tx_ext7timer_plugin7timer.flexform.name">
-				<source>Select Location</source>
+				<source>Select Default Location</source>
 			</trans-unit>
 		</body>
 	</file>

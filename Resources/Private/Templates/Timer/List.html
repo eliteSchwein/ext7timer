@@ -26,7 +26,18 @@
             <div id="ext7timer_day_content"></div>
             <div id="ext7timer_date_picker"></div>
             <div id="ext7timer_city_label">
-                <f:format.raw>{configuration.label}</f:format.raw>
+                <select id="ext7timer_selector" onchange="changeLocation(this.value)">
+                    <f:for each="{configurations}" as="configuration">
+                        <f:if condition="{configuration.uid} === {default_configuration.uid}">
+                            <f:then>
+                                <option value="{configuration.lon}:{configuration.lat}" selected>{configuration.label}</option>
+                            </f:then>
+                            <f:else>
+                                <option value="{configuration.lon}:{configuration.lat}">{configuration.label}</option>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </select>
             </div>
         </div>
     </div>
@@ -58,8 +69,6 @@
         }
     </script>
     <script>
-        const timezoneUrl = 'http://api.geonames.org/timezoneJSON?lng=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&username=eliteschw31n'
-        const url = 'http://www.7timer.info/bin/api.pl?lon=<f:format.raw>{configuration.lon}</f:format.raw>&lat=<f:format.raw>{configuration.lat}</f:format.raw>&product=civil&output=json'
         const preloaderParent = document.getElementById('ext7timer_preloader')
         const errorParent = document.getElementById('ext7timer_error')
         const successParent = document.getElementById('ext7timer_content')
@@ -70,6 +79,9 @@
         let weatherData
         let parsedWeatherData = {}
 
+        let lon = <f:format.raw>{default_configuration.lon}</f:format.raw>
+        let lat = <f:format.raw>{default_configuration.lat}</f:format.raw>
+
         function reconnect() {
             successParent.classList.add('ext7timer_hide')
             errorParent.classList.add('ext7timer_hide')
@@ -77,17 +89,22 @@
             retrieveData()
         }
 
+        function changeLocation(value) {
+            lon = value.split(':')[0]
+            lat = value.split(':')[1]
+            reconnect()
+        }
+
         function changeDate(newDate) {
             let day = newDate.split('.')[0]
+            let month = newDate.split('.')[1]
             for(let elementIndex in buttonRow.children) {
                 let element = buttonRow.children[elementIndex]
                 if(element.tagName === 'BUTTON') {
-                    element.disabled = element.innerHTML === day
+                    element.disabled = element.innerHTML === `${day}.${month}`
                 }
             }
             weatherRow.innerHTML = '';
-            console.log(parsedWeatherData)
-            console.log(Object.keys(parsedWeatherData[newDate]))
             for(let index in Object.keys(parsedWeatherData[newDate])){
                 let hour = Object.keys(parsedWeatherData[newDate])[index]
                 let hourData = parsedWeatherData[newDate][hour]
@@ -128,7 +145,7 @@
                 let weatherDate = Object.keys(parsedWeatherData)[index]
                 let button = document.createElement('button')
                 button.classList.add('ext7timer_button')
-                button.innerText = weatherDate.split('.')[0]
+                button.innerText = `${weatherDate.split('.')[0]}.${weatherDate.split('.')[1]}`
                 button.addEventListener('click', () => {
                     changeDate(weatherDate)
                 })
@@ -178,6 +195,8 @@
         }
 
         function retrieveData() {
+            const timezoneUrl = `http://api.geonames.org/timezoneJSON?lng=${lon}&lat=${lat}&username=eliteschw31n`
+            const url = `http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civil&output=json`
             parsedWeatherData = {}
             let failed = false
             $.ajax({
